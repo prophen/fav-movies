@@ -12,7 +12,7 @@ import UIKit
 
 
 class FavMovie: NSManagedObject {
-
+   
     func setMovieImage(img: UIImage) {
         let data = UIImagePNGRepresentation(img)
         self.image = data
@@ -22,4 +22,6 @@ class FavMovie: NSManagedObject {
         let img = UIImage(data: self.image!)!
         return img
     }
+    
+   
 }

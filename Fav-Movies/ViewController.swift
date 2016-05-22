@@ -39,6 +39,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        var movie: FavMovie!
+        
+        movie = movies[indexPath.row]
+
+        performSegueWithIdentifier("MoviesDetailVC", sender: movie)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
@@ -59,6 +68,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
         return  movies.count
 
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "MoviesDetailVC" {
+            if let detailsVC =  segue.destinationViewController as? MoviesDetailVC {
+                if let movie = sender as? FavMovie {
+                    detailsVC.movie = movie
+                }
+            }
+        }
     }
 
  

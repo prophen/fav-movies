@@ -3,11 +3,12 @@
     <entity name="FavMovie" representedClassName=".FavMovie" syncable="YES">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="imgUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="plotDesc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FavMovie" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="FavMovie" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>
